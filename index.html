@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/bootstrap.css" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <title>Temperature Converter</title>
+  </head>
+  <body>
+    <div class="container mt-5 p-5 converterBox">
+      <div class="row">
+        <div class="header col-12 text-center">
+          <h1>Temperature Converter</h1>
+        </div>
+        <div class="converter">
+          <div class="col-12">
+            <input
+              class="col-4 mt-2 mb-1"
+              type="number"
+              required
+              name="fahrenheit"
+              id="fahrenheit"
+            />
+
+            <h4 class="col-3">Farenheit</h4>
+          </div>
+          <div class="col-12">
+            <input
+              class="col-4 mb-1"
+              type="number"
+              name="celsius"
+              id="celsius"
+            />
+            <h4 class="col-3">Celsius</h4>
+          </div>
+          <div class="col-12">
+            <input class="col-4 mb-1" type="number" name="kelvin" id="kelvin" />
+            <h4 class="col-3">Kelvin</h4>
+          </div>
+          <div class="button text-center col-12">
+            <button class="col-3 text-center" type="submit">Convert</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+  <script src="./js/script.js"></script>
+</html>

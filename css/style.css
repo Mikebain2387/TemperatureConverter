@@ -1,0 +1,16 @@
+html, body{
+ background-color: rgb(2, 2, 2);
+}
+
+.converterBox{
+ background: rgb(0,0,0);
+ background: linear-gradient(180deg, rgba(0,0,0,1) 0%, rgba(14,14,13,1) 6%, rgba(253,29,29,1) 43%, rgba(14,14,13,1) 76%);
+ box-sizing: border-box;
+ border: 2px solid rgb(175, 173, 173);
+ color: ivory;
+
+}
+
+h4{
+ font-size: 20px;
+}
