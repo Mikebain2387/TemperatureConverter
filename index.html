@@ -8,35 +8,40 @@
     <title>Temperature Converter</title>
   </head>
   <body>
-    <div class="container mt-5 p-5 converterBox">
+    <div class="container mt-5 p-5 converterBox text-center mx-auto">
       <div class="row">
-        <div class="header col-12 text-center">
+        <div class="header col-12 text-center mb-2">
           <h1>Temperature Converter</h1>
         </div>
-        <div class="converter mx-auto text-center">
+        <div class="converter">
           <div class="row">
-            <input
-              class="col-4 mt-2 mb-1 inputs"
+            <div class="ftemp">
+
+              <input
+              class="col-lg-4 col-6 mt-2 mb-2 me-2 inputs"
               type="number"
               required
               name="fahrenheit"
               id="fahrenheit"
-            />
-            <button
+              />
+              <button
               id="buttonSubmit1"
               class="col-3 text-center sub"
               type="submit"
-            >
+              >
               °F
             </button>
           </div>
-          <div class="row">
+          
+          <div class="ctemp">
             <input
-              class="col-4 mb-1 inputs"
+              class="col-lg-4 col-6 mb-2 me-2 inputs"
               type="number"
               name="celsius"
               id="celsius"
+              required
             />
+
             <button
               id="buttonSubmit2"
               class="col-3 text-center sub"
@@ -45,21 +50,26 @@
               °C
             </button>
           </div>
-          <div class="row">
+          <div class="ktemp">
             <input
-              class="col-4 mb-1 inputs"
+              class="col-lg-4 col-6 mb-2 me-2 inputs"
               type="number"
               name="kelvin"
               id="kelvin"
+              required
             />
-            <button id="buttonSubmit3" class="col-3 text-center" type="submit">
+            <button
+              id="buttonSubmit3"
+              class="col-3 text-center sub"
+              type="submit"
+            >
               °K
             </button>
           </div>
           <div class="button text-center col-12">
             <button
               id="buttonClear"
-              class="col-3 text-center sub"
+              class="col-lg-1 col-4 mt-3 text-center clear"
               type="submit"
             >
               CLEAR

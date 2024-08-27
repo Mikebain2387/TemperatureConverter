@@ -54,7 +54,7 @@ submit1.addEventListener("click", function() {
  
  submit2.addEventListener("click", function() {
   let celsiusTemp = celsiusInput.value;
-  let  farenheitTemp= (celsiusTemp * (5/9)) + 32;
+  let  farenheitTemp= (celsiusTemp * (9/5)) + 32;
   let kelvinTemp = celsiusTemp + 273.15;
  
   fahrenheitInput.value = farenheitTemp.toFixed(2);
