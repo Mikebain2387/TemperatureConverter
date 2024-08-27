@@ -3,7 +3,10 @@
 
  
 //? 2. HTML Structure
+
+/*
 //TODO Title: Create a title and a header for your temperature converter page.
+*/
 //*TODO Input Fields:
 //* Add an input field where users can enter a temperature value.
 //* Include dropdown menus for selecting the temperature units (e.g., Celsius, Fahrenheit, Kelvin) for both the original and target units.
@@ -27,3 +30,54 @@
 //* Unit Conversion Validation: Prevent unnecessary conversions, such as converting from Celsius to Celsius.
 //* Additional Features: Consider adding features like converting to multiple units simultaneously or a reset button to clear the inputs and results.
  
+let fahrenheitInput = document.getElementById('fahrenheit');
+
+let celsiusInput = document.getElementById('celsius');
+
+let kelvinInput = document.getElementById('kelvin');
+
+let btn = document.getElementById('buttonClear');
+let submit1 = document.getElementById('buttonSubmit1');
+let submit2 = document.getElementById('buttonSubmit2');
+let submit3 = document.getElementById('buttonSubmit3');
+
+
+
+submit1.addEventListener("click", function() {
+ let farenheitTemp = fahrenheitInput.value;
+ let celsiusTemp = (farenheitTemp - 32) * (5/9);
+ let kelvinTemp = (farenheitTemp - 32) * (5/9) + 273.15;
+ 
+ celsiusInput.value = celsiusTemp.toFixed(2);
+ kelvinInput.value = kelvinTemp.toFixed(2);
+ })
+ 
+ submit2.addEventListener("click", function() {
+  let celsiusTemp = celsiusInput.value;
+  let  farenheitTemp= (celsiusTemp * (5/9)) + 32;
+  let kelvinTemp = celsiusTemp + 273.15;
+ 
+  fahrenheitInput.value = farenheitTemp.toFixed(2);
+  kelvinInput.value = kelvinTemp;
+  })
+ 
+ 
+ 
+ 
+   submit3.addEventListener("click", function() {
+    let kelvinTemp = kelvinInput.value;
+    let farenheitTemp = (kelvinTemp - 273.15) * (9/5) + 32;
+    let celsiusTemp = (kelvinTemp - 273.15);
+    
+    celsiusInput.value = celsiusTemp.toFixed(2);
+    fahrenheitInput.value = farenheitTemp.toFixed(2);
+    })
+ 
+
+
+btn.addEventListener("click", function(){
+ fahrenheitInput.value ="";
+ celsiusInput.value = "";
+ kelvinInput.value = "";
+
+})
