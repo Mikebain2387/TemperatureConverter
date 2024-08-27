@@ -41,39 +41,52 @@ let submit1 = document.getElementById('buttonSubmit1');
 let submit2 = document.getElementById('buttonSubmit2');
 let submit3 = document.getElementById('buttonSubmit3');
 
+let temperatureInput = document.querySelectorAll("div.converter input");
 
 
-submit1.addEventListener("click", function() {
+ 
+
+
+
+
+submit1.addEventListener("click", tempConversion)
+ 
+function tempConversion(){
+
+if(temperatureInput[0] === fahrenheitInput && fahrenheitInput.value != ''){
+
  let farenheitTemp = fahrenheitInput.value;
  let celsiusTemp = (farenheitTemp - 32) * (5/9);
  let kelvinTemp = (farenheitTemp - 32) * (5/9) + 273.15;
  
  celsiusInput.value = celsiusTemp.toFixed(2);
  kelvinInput.value = kelvinTemp.toFixed(2);
- })
+}
  
- submit2.addEventListener("click", function() {
+
+  else if (temperatureInput[1] === celsiusInput && celsiusInput.value != ''){
   let celsiusTemp = celsiusInput.value;
   let  farenheitTemp= (celsiusTemp * (9/5)) + 32;
   let kelvinTemp = celsiusTemp + 273.15;
- 
+  
   fahrenheitInput.value = farenheitTemp.toFixed(2);
   kelvinInput.value = kelvinTemp;
-  })
+ }
+  
  
  
  
- 
-   submit3.addEventListener("click", function() {
-    let kelvinTemp = kelvinInput.value;
-    let farenheitTemp = (kelvinTemp - 273.15) * (9/5) + 32;
-    let celsiusTemp = (kelvinTemp - 273.15);
-    
-    celsiusInput.value = celsiusTemp.toFixed(2);
-    fahrenheitInput.value = farenheitTemp.toFixed(2);
-    })
- 
-
+ else if (temperatureInput[2] === kelvinInput && kelvinInput.value != ''){
+  let kelvinTemp = kelvinInput.value;
+  let farenheitTemp = (kelvinTemp - 273.15) * (9/5) + 32;
+  let celsiusTemp = (kelvinTemp - 273.15);
+  
+  celsiusInput.value = celsiusTemp.toFixed(2);
+  fahrenheitInput.value = farenheitTemp.toFixed(2);
+ }
+   
+}
+  
 
 btn.addEventListener("click", function(){
  fahrenheitInput.value ="";
