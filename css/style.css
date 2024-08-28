@@ -2,7 +2,7 @@
 
 html, body{
 
- background: linear-gradient(180deg, rgba(0, 73, 83, 0.7) , rgba(0, 73, 83, 0.7)), url("/images/mountains.jpg");
+ background: linear-gradient(180deg, rgba(0, 73, 83, 0.7) , rgba(0, 73, 83, 0.7)), url("../images/mountains.jpg");
  height: 100%;
  background-size: cover;
  background-position: center;
